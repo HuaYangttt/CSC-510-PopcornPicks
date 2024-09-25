@@ -109,7 +109,9 @@ $(document).ready(function () {
                   <div class="index" hidden>${i}</div>
                 </div>
               </div>
-              
+              <div class="col-md-4">
+                  <img src="${fetchPosterURL(data[i].imdb_id)}" alt="Movie Poster" class="poster-image" style="width: 75%; height: auto; margin: 0;">
+              </div>
               <div class="row">
                 <div class="card-footer text-muted">Genres : ${data[i].genres}</div>  
               </div>
@@ -145,10 +147,6 @@ $(document).ready(function () {
       },
     });
   });
-
-//<div class="col-md-4">
-//<img src="${fetchPosterURL(data[i].imdb_id)}" alt="Movie Poster" class="poster-image" style="width: 75%; height: auto; margin: 0;">
-//</div>
 
   window.addEventListener("popstate", function (event) {
     // Check if the user is navigating back
